@@ -1,0 +1,11 @@
+Affinari SDK © 2025 Andrew Fielden
+DOI: https://doi.org/10.5281/zenodo.17297114
+
+This package includes components of the Affinari Alignment Engine.
+Non-commercial use permitted under Affinari SDK License v1.0.
+
+Commercial use requires written agreement.
+Contact: licensing@affinari.ai
+
+Attribution required:
+"Powered by Affinari Alignment Engine © Andrew Fielden (2025)"
