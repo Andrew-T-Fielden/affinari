@@ -1,0 +1,75 @@
+# Affinari SDK License (Version 1.0)
+© 2025 **Andrew Fielden**. All rights reserved.
+DOI: https://doi.org/10.5281/zenodo.17297114
+
+## 1. Purpose
+This License governs the use of the Affinari SDK, a reference implementation of the Affinari Alignment Engine, including schemas, sample data, and matching logic (e.g. Weighted Manhattan and Cosine similarity modules).
+
+Its purpose is to enable transparent exploration, research, and development of alignment-based intelligence while protecting the integrity and commercial identity of Affinari®.
+
+## 2. Ownership and Trademark
+All rights in the Affinari SDK, associated documentation, and related materials are owned by Andrew Fielden.
+
+Affinari™ and associated marks or logos are protected under UK and international trademark law.
+No rights to use these marks are granted except as expressly stated below.
+
+## 3. License Grant
+
+### 3.1 Non-Commercial License
+You are permitted to:
+- Use, study, and modify the SDK for personal, academic, research, or non-commercial projects.
+- Redistribute unmodified or modified copies under the same license, provided that attribution and this license text are included in all copies.
+
+**Conditions:**
+- You must cite the Affinari DOI above in any derivative work or publication.
+- You may not sell, license, or include the SDK in any commercial product or service.
+- You may not remove or obscure notices of copyright, authorship, or trademark.
+
+### 3.2 Commercial Use
+Commercial use of the Affinari SDK, derivative works, or integrations requires a separate written license or agreement from the copyright holder.
+
+Commercial use includes (but is not limited to):
+- Incorporating the SDK into a paid or monetised product, service, or SaaS platform.
+- Using the SDK internally within a for-profit enterprise environment.
+- Offering consulting, integration, or development services that rely on the SDK.
+
+Contact licensing@affinari.ai for commercial licensing terms.
+
+## 4. Attribution Requirements
+All uses of the SDK or derivative works must include the following attribution (for example, in documentation, splash screens, or “About” dialogs):
+
+> Powered by Affinari Alignment Engine © Andrew Fielden (2025).
+> Used under Affinari SDK License v1.0 — see https://doi.org/10.5281/zenodo.17297114.
+
+## 5. Derivative Works
+Derivative works must:
+- Preserve the transparent and explainable structure of the Affinari system.
+- Be distributed under terms that do not restrict non-commercial access to the modified code.
+- Not claim to be “Affinari” or imply official endorsement without written consent.
+
+Use of the “Affinari” name or logo is prohibited without explicit authorization.
+
+## 6. Warranty Disclaimer
+The SDK is provided “as is”, without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement.
+The author shall not be liable for any claim, damages, or other liability arising from the use or inability to use the SDK.
+
+## 7. Termination
+Any breach of this License automatically terminates your rights under it.
+Upon termination, you must cease all use and distribution of the SDK and remove any Affinari trademarks or references from your materials.
+
+## 8. Jurisdiction
+This License shall be governed by the laws of England and Wales, and disputes shall be subject to the exclusive jurisdiction of the English courts.
+
+## 9. Contact
+For commercial licensing, research partnerships, or trademark permissions:
+Email: licensing@affinari.ai
+Website: https://affinari.ai (placeholder domain)
+
+### Summary (plain-language)
+| Use Case | Allowed? | Conditions |
+|-----------|-----------|------------|
+| Personal or academic research | ✅ | Keep attribution and DOI |
+| Non-commercial open-source adaptation | ✅ | Same license and attribution |
+| Embedding in commercial SaaS or SDK | 🚫 | Requires separate written license |
+| Using “Affinari” name or logo | 🚫 | Only with written permission |
+| Modifying internal logic for study | ✅ | Must remain transparent |
