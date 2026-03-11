@@ -136,6 +136,29 @@ Affinari does not replace CRM. It is the intelligence layer that makes CRM data 
 
 ---
 
+## Preference Passport
+
+The **Affinari Preference Passport** is a proposed extension to the OAuth 2.0 authorisation framework that enables individuals to hold, control, and share their encoded preference data across institutional and application boundaries — with explicit, scoped, revocable consent.
+
+Where OAuth 2.0 standardised portable identity, and OpenID Connect extended it with a portable identity layer, the Preference Passport extends it with a portable preference layer.
+
+An individual's preference profile — their orientation across any Affinari domain — should belong to them, not to the institution that helped encode it. The Preference Passport makes that portability technically and legally concrete.
+
+Key properties:
+
+- Domain-scoped access grants (`affinari:preferences:gifts`, `affinari:preferences:travel` etc.)
+- Encoded preference vectors shared, not underlying personal data
+- Explicit, time-limited, revocable consent per scope
+- Inferred vectors (third-party gift scenarios) never persisted without subject consent
+- GDPR compliant by architecture
+- Sovereign deployment supported — no cloud dependency on the critical path
+
+The gift receiver flow — where a gift recipient is invited to establish their own verified preference profile — is both a natural onboarding path and a network growth mechanism. Word of mouth operationalised and verified to preference type.
+
+See [`affinari_preference_passport.md`](./affinari_preference_passport.md) for the full concept specification and prior art disclosure.
+
+---
+
 ## IP and prior art
 
 This repository contains timestamped documentation establishing the originality of the Affinari system.
