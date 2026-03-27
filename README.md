@@ -1,99 +1,312 @@
 # Affinari
 
-**Affinari is a preference intelligence protocol.**
+Any system that has state, makes decisions, and acts in an 
+environment faces the same fundamental problem: how does it know 
+what to do?
 
-It provides the schema standard, scoring kernel, and exchange architecture for aligning people with options — across any domain where preference matters.
+Affinari answers that question with a single mechanism applicable 
+to any domain. Encode what matters as a weighted trait schema. 
+Measure the distance between current state and target coherence. 
+Act to reduce that distance. Repeat.
 
-The first application is **Matteo**, a concierge intelligence tool for private client services. The protocol is domain-agnostic. The same kernel that scores a Mallorca hotel recommendation scores a navigation route, a financial product, or a game AI decision. The domain is defined by the bundle. The kernel doesn't change.
+That mechanism runs boids. It runs forest fire simulations. It runs game AI. 
+It navigates boats. It governs agentic AI. It matches hotel 
+preferences. It validates inference. It models how biological 
+intelligence constructs behaviour.
+
+The domain changes. The mechanism never does.
 
 ---
 
-## What it does
+## The Mechanism
 
-Affinari encodes individual preference as a vector of weighted traits — not a demographic segment, not a behavioural cluster, not a star rating. A preference vector describes *how a specific person relates to a specific domain at a specific moment*. It is held separately per domain, because the same person can want a restorative hotel and a stimulating dining experience. Systems that type people as a single profile miss this. Affinari holds the distinction.
+Every domain has structure. Structure can be encoded as traits. 
+Traits can be weighted. Weighted traits define a target 
+configuration — a schema of what coherence looks like in this 
+domain.
 
-Scoring runs on weighted Manhattan distance — transparent, auditable, fast, and runnable on commodity hardware without any cloud dependency.
+Given a current state and a target schema, the distance between 
+them is calculable. Given a calculable distance, behaviour that 
+reduces it is derivable. Given behaviour that reduces distance, 
+coherence emerges.
 
-The **doppelganger layer** addresses the cold start problem without pooling client data. Where signal is thin for a new client, the system borrows from the encoded preference signals of clients whose *known* dimensions align — not their records, not their identity, only their abstract preference encoding. The inference crosses the network. The data does not.
+That is Affinari. No more is required.
+
+The scoring kernel:
+```
+coherence = 1 − (Σ wᵢ · |state_i − target_i|) / Σ wᵢ
+```
+
+Weighted Manhattan distance in normalised trait space. 
+Transparent. Deterministic. Auditable. Explainable. Runnable 
+on commodity hardware without external dependency.
+
+Missing values are ignored, not zeroed. Absence of information 
+is architecturally distinct from a value of zero.
+
+---
+
+## The OMCA Loop
+
+Coherence-seeking behaviour operates as a continuous cycle:
+```
+OBSERVE   → Read current state as a trait vector
+MODULATE  → Adjust weights and context
+CALCULATE → Compute coherence with target schema
+ACTUATE   → Act to reduce distance from target
+              ↓
+           REPEAT
+```
+
+This loop is the complete operational expression of Affinari. 
+It requires no external services, no training data, no cloud 
+infrastructure. It requires a trait space, a schema, and a 
+kernel.
+
+---
+
+## What It Runs
+
+**Boids**
+Each agent observes the position and velocity traits of its 
+neighbours. The schema defines what a coherent flock looks like. 
+The kernel calculates distance. The agent actuates to reduce it. 
+Emergent flocking behaviour arises from local coherence-seeking 
+with no central controller and no global plan.
+
+**Forest fire**
+Each cell observes fuel and dryness traits. Burn and grow 
+profiles define target configurations. The kernel calculates 
+affinity. Cells transition state accordingly. The result is 
+self-organised coherence — not criticality and collapse but 
+stable dynamic behaviour emerging from local trait interactions.
+
+**Game AI and navigation**
+Agents observe environment state as a trait vector. Goal profiles 
+define target configurations. The kernel calculates coherence. 
+Agents navigate, decide, and adapt. Schemas self-modify through 
+outcome feedback — weights adjust based on what worked. This is 
+not training. It is continuous coherence-seeking with memory.
+
+**Robotics**
+Sensor state observed as traits. Target behaviour encoded as 
+schema. Kernel calculates coherence. Actuators reduce distance. 
+The same loop that flocks birds navigates physical systems in 
+the real world.
+
+**Preference matching (Matteo)**
+Client preference encoded as a weighted trait vector. Available 
+services encoded against the same schema. Kernel ranks by 
+coherence. The result is transparent, explainable matching 
+with per-trait gap analysis. No black box. No behavioural 
+surveillance. No correlation mining. Declared preference 
+matched against structured offering.
+
+**Inference governance (GatedClaw)**
+Proposed agent action observed as a trait vector. Authority 
+schema defines what is permitted. Fit'd calculates coherence. 
+Verdict produced with full alignment report. The intelligence 
+that governs the agent is in the schema. The agent cannot 
+manipulate it because it operates outside the agent entirely.
+
+These are not different products. They are one mechanism 
+applied to different schemas.
+
+---
+
+## The Doppelganger Layer
+
+Where signal is thin — a new client, a novel situation, an 
+under-specified state vector — the doppelganger layer infers 
+from aligned patterns in the network.
+
+Entities whose known trait dimensions align with the current 
+entity contribute their encoded patterns to fill the gaps. Not 
+their records. Not their identity. Only their abstract 
+structural encoding.
+
+This mirrors how biological intelligence handles novelty. The 
+brain does not start from scratch with unfamiliar situations. 
+It borrows from similar past experiences, constructs a 
+prediction, and adjusts based on outcome. Lisa Feldman Barrett's 
+theory of constructed cognition demonstrates that behaviour 
+itself emerges from this continuous coherence-seeking against 
+accumulated pattern — emotion, perception, and action are all 
+constructions built from prior experience meeting current state.
+
+The doppelganger layer is a formal implementation of that 
+process. The inference crosses the network. The data does not.
+
+This capability has profound implications beyond preference 
+matching. An expanding, evolving human trait schema built on 
+declared preference could model individual human behaviour at 
+a level that makes Cambridge Analytica look primitive. Affinari 
+is built on declared preference and schema governance precisely 
+because this implication was understood from the beginning. 
+The ethical architecture is not a feature added to a capable 
+system. It is the foundation the system was built on.
+
+---
+
+## On Language and Intelligence
+
+Language is how intelligence is communicated between humans. 
+It is the interface, not the thing itself.
+
+Large language models are extraordinarily capable synthesisers 
+of human language. They produce fluent, plausible, contextually 
+appropriate text at scale. This is genuinely useful. It is not 
+intelligence. Fluency is not reasoning. Plausibility is not 
+correctness. The synthesis of language patterns is not the 
+expression of structured intelligence.
+
+When Affinari interfaces with human language — in Matteo, in 
+GatedClaw, in any application where natural language is the 
+input or output — an LLM acts as the translator between human 
+expression and the structured intelligence of the Affinari 
+kernel. This is exactly the role language plays in human 
+communication. We use language to share intelligence. We do 
+not mistake a fluent speaker for a wise one.
+
+The LLM translates. The schema reasons. The kernel decides. 
+These are different functions and must remain architecturally 
+separate for the system to be trustworthy.
+
+Fit'd is the mechanism that enforces that separation.
+
+---
+
+## Fit'd
+
+Fit'd applies a schema to any inference output to check whether 
+it is producing aligned results, stating where it fits and 
+where it doesn't.
+
+It operates at both ends of any language interface:
+
+**Input gate** — validates that what enters the inference 
+engine conforms to the schema. Prompt injection, malicious 
+instructions, and out-of-scope inputs are caught before 
+inference runs. The intelligence is not accessible to 
+manipulation through the language interface.
+
+**Output gate** — validates that what the inference engine 
+proposes conforms to the schema before actuation. Misaligned 
+outputs, unauthorised actions, and policy violations are 
+caught before they have real world consequence.
+
+Every Fit'd decision produces a timestamped alignment report:
+
+- Alignment score
+- Schema criteria satisfied
+- Schema criteria violated  
+- Items requiring human review
+- Plain English summary
+
+Not a filter. Not a blocklist. An alignment report with full 
+audit trail. Human-readable. Regulator-ready. Reproducible.
+
+The first published implementation of Fit'd applied to agentic 
+AI governance is GatedClaw, published 25th March 2026.
+→ github.com/Andrew-T-Fielden/gatedclaw
+
+---
+
+## Self-Modification
+
+Schemas are not static. Weights adjust based on outcomes. 
+Trait definitions refine as the domain is better understood. 
+New traits emerge from gap analysis — when Fit'd encounters 
+inputs or outputs that don't map to existing schema dimensions, 
+that is information about what the schema is missing.
+
+This is not training in the machine learning sense. No gradient 
+descent. No loss function. No opaque weight updates. It is 
+explicit, inspectable schema evolution — human-gated by default 
+because every schema change is a named decision with a timestamp 
+and a reason.
+
+The system that identifies its own gaps and proposes 
+improvements, which a human reviews and approves before they 
+take effect, is auditable in a way that a self-training model 
+can never be.
+
+---
+
+## Sovereign Deployment
+
+The complete stack runs without external dependency. OMCA 
+kernel, Fit'd validation, schema library, bundle matching — 
+all on commodity hardware. Local inference for language 
+interface where required (Mistral 7B, Llama 3, and equivalents 
+on Apple M-series and equivalent). No cloud call required on 
+the critical path. No data leaves the deployment environment.
+
+This is not a compliance feature. It is a property of the 
+architecture.
+
+---
+
+## The Standards Body
+
+Schemas for each domain are governed by an open standards body 
+with participation from domain practitioners — tourist boards, 
+hotel groups, financial services compliance functions, 
+healthcare administrators, legal practitioners. The schema is 
+the contract between domain knowledge and the kernel. The 
+standards body ensures that contract reflects genuine expertise 
+rather than technical convenience.
+
+Private bespoke schemas coexist with open standards within the 
+same architecture. An organisation with specific requirements 
+that cannot be publicly standardised uses the same kernel 
+against their own schema.
 
 ---
 
 ## Architecture
-
 ```
 Affinari Holdings
 │
-├── Protocol layer       Schema standard · Bundle format · Scoring specification
-│                        Open, versioned, governed by Affinari Holdings
+├── Protocol layer    OMCA loop definition
+│                     Schema standard · Bundle format
+│                     Scoring specification
+│                     Fit'd validation specification
+│                     Open, versioned, governed by 
+│                     Affinari Holdings
 │
-├── Exchange layer       Bundle marketplace · Quality certification · API access
-│                        Operators publish, discover, and subscribe to domain bundles
-│                        Revenue: listing fees · certification · access tiers
+├── Fit'd layer       Input gate · Output gate
+│                     Alignment reporting · Audit trail
+│                     Model-agnostic · Origin-agnostic
 │
-└── Application layer    Matteo (concierge intelligence) · first reference implementation
-                         Same kernel available for: private banking · travel · retail ·
-                         navigation · game AI · financial products · any preference domain
+├── Exchange layer    Bundle marketplace
+│                     Quality certification
+│                     Schema library · API access
+│
+└── Application layer Matteo — concierge intelligence
+                      GatedClaw — agentic AI governance
+                      Navigation · Robotics · Game AI
+                      Boids · Forest fire · Simulation
+                      Any coherence-seeking domain
 ```
 
 ---
 
-## The kernel
+## IP and Prior Art
 
-The scoring kernel takes three inputs and returns a ranked list:
+- `affinari_defensive_disclosure.md` — formal prior art summary
+- `Affinari_SDK_License_v1.txt` — commercial SDK licence
+- `LICENSE.md` — repository licence
 
-- A **bundle** — schema defining the trait space for a domain, plus items encoded against it
-- A **preference vector** — a client's weighted orientation across those traits
-- Optional **filters** — required tags, excluded tags, categorical constraints
+OMCA loop, Fit'd validation mechanism, bundle format, scoring 
+specification, doppelganger architecture, and exchange model 
+published 2025.
 
-It returns items ranked by alignment score, with per-trait gap analysis and concierge notes surfaced at the right moment.
+GatedClaw — first reference implementation of Fit'd applied 
+to agentic AI governance — published 25th March 2026.
 
-The kernel is deterministic. Every result is explainable. There is no black box.
-
-**Scoring:**
-```
-alignment = 1 − (Σ wᵢ · |preference_i − item_i|) / Σ wᵢ
-```
-
-Missing scalars are ignored, not zeroed. Null means no preference stated — architecturally distinct from a preference of zero.
-
----
-
-## The bundle format
-
-Every domain is described by a single bundle file:
-
-```json
-{
-  "bundle_version": "1.0.0",
-  "schema": {
-    "id": "domain_name_v1",
-    "name": "Domain Name",
-    "engine": {
-      "scoring": {
-        "method": "manhattan",
-        "missing_scalar": "ignore"
-      }
-    },
-    "traits": {
-      "scalars": [
-        { "id": "trait_id", "name": "Trait Name", "weight": 1.0 }
-      ],
-      "tags": [
-        { "id": "tag_id", "name": "Tag Name" }
-      ],
-      "categoricals": [
-        { "id": "cat_id", "name": "Category", "options": [] }
-      ]
-    }
-  },
-  "items": {
-    "domain_schema_id": "domain_name_v1",
-    "items": []
-  }
-}
-```
-
-Bundles are self-contained, portable, and publishable to the Affinari exchange. Any operator can create a bundle for their domain. The schema standard is the contract between bundle authors and the kernel.
+All materials © 2025-2026 Andrew T. Fielden. 
+All rights reserved.
 
 ---
 
@@ -101,93 +314,31 @@ Bundles are self-contained, portable, and publishable to the Affinari exchange. 
 
 | Repository | Description |
 |---|---|
-| [`affinari`](https://github.com/Andrew-T-Fielden/affinari) | Protocol specification · IP · defensive disclosure · SDK licence |
-| [`affinari_lite`](https://github.com/Andrew-T-Fielden/affinari_lite) | Browser-based reference implementation · runs offline · any bundle · live at [affinari_lite](https://andrew-t-fielden.github.io/affinari_lite/) |
-
-The Matteo concierge implementation — TypeScript kernel, Express server, six client profiles, four Mallorca domain bundles, local LLM inference — is the current private reference implementation and is available under a separate commercial licence.
-
----
-
-## Sovereign deployment
-
-The extraction layer — natural language brief to preference vector — runs on local inference models (Mistral 7B, Llama 3, and equivalents) on commodity hardware including the Apple M-series Mac Mini. No external API call is required on the critical path. Client preference data never leaves the institution's infrastructure.
-
-This is not a compliance feature added to an existing architecture. It is a property of how the system is built. The kernel, the bundles, the client profiles, and the extraction layer can all run air-gapped.
-
-As local inference hardware and models improve, the capability improves automatically. The sovereignty argument strengthens over time without any architectural change.
-
----
-
-## Differentiation from CRM and clienteling
-
-**CRM** records what happened. It is a transaction log with workflow on top. When the relationship manager leaves, the record stays but the understanding goes with them.
-
-**Clienteling** adds behavioural triggers to CRM — surface the right client at the right moment with the right history. It still works from what the client *did*, not what the client *is*.
-
-**Affinari** encodes underlying preference orientation, not behaviour. Behaviour is noisy — a client books the same hotel every year not because it is their ideal but because they trust it. A preference-based system can see what behaviour cannot reveal.
-
-Three distinctions that are architectural, not positional:
-
-1. **Encoded preference vs recorded behaviour.** The vector describes orientation. Behaviour only partially reveals it.
-2. **Cross-domain independence.** The same person holds different preference orientations in different contexts. Affinari holds them separately. No existing CRM or clienteling system does.
-3. **Privacy-preserving network effect.** The doppelganger layer enriches individual profiles from network signals without any client record leaving the institution. The inference crosses the network. The data does not.
-
-Affinari does not replace CRM. It is the intelligence layer that makes CRM data useful in the moment of recommendation rather than only in the moment of review.
-
----
-
-## Preference Passport
-
-The **Affinari Preference Passport** is a proposed extension to the OAuth 2.0 authorisation framework that enables individuals to hold, control, and share their encoded preference data across institutional and application boundaries — with explicit, scoped, revocable consent.
-
-Where OAuth 2.0 standardised portable identity, and OpenID Connect extended it with a portable identity layer, the Preference Passport extends it with a portable preference layer.
-
-An individual's preference profile — their orientation across any Affinari domain — should belong to them, not to the institution that helped encode it. The Preference Passport makes that portability technically and legally concrete.
-
-Key properties:
-
-- Domain-scoped access grants (`affinari:preferences:gifts`, `affinari:preferences:travel` etc.)
-- Encoded preference vectors shared, not underlying personal data
-- Explicit, time-limited, revocable consent per scope
-- Inferred vectors (third-party gift scenarios) never persisted without subject consent
-- GDPR compliant by architecture
-- Sovereign deployment supported — no cloud dependency on the critical path
-
-The gift receiver flow — where a gift recipient is invited to establish their own verified preference profile — is both a natural onboarding path and a network growth mechanism. Word of mouth operationalised and verified to preference type.
-
-See [`affinari_preference_passport.md`](./affinari_preference_passport.md) for the full concept specification and prior art disclosure.
-
----
-
-## IP and prior art
-
-This repository contains timestamped documentation establishing the originality of the Affinari system.
-
-- `affinari_defensive_disclosure.md` — formal prior art summary
-- `Affinari_SDK_License_v1.txt` — commercial SDK licence terms
-- `LICENSE.md` — repository licence
-
-The bundle format, scoring specification, doppelganger architecture, and exchange model were published here and in `affinari_lite` in 2025, prior to any commercial deployment.
-
-All materials © 2025 Andrew T. Fielden. All rights reserved.
+| [`affinari`](https://github.com/Andrew-T-Fielden/affinari) | Protocol · IP · defensive disclosure · SDK licence |
+| [`affinari_lite`](https://github.com/Andrew-T-Fielden/affinari_lite) | Browser reference implementation · offline · live |
+| [`gatedclaw`](https://github.com/Andrew-T-Fielden/gatedclaw) | Fit'd governance for agentic AI · tested against OpenClaw |
 
 ---
 
 ## Status
 
-Protocol specification: **published**  
-Reference implementation (Lite): **live** — [andrew-t-fielden.github.io/affinari_lite](https://andrew-t-fielden.github.io/affinari_lite/)  
-Concierge application (Matteo): **working implementation, private**  
-Local inference validation: **complete** — Mistral 7B on Apple M4  
-Exchange architecture: **specified, pre-launch**  
-First domain deployment: **in progress**
+Protocol specification: **published**
+OMCA reference implementations: **boids · forest fire · 
+navigation · live**
+Affinari Lite: **live**
+Fit'd validation: **published**
+GatedClaw: **working, public** — 25 March 2026
+Matteo (concierge): **working, private**
+Local inference validation: **complete**
+Exchange architecture: **specified, pre-launch**
+First domain deployment: **in progress — Rhodes, Greece**
 
 ---
 
 ## Contact
 
-For founding partner discussions, domain licence enquiries, or exchange participation:
-
-**Andrew T. Fielden**  
-[flatpackforces@gmail.com](mailto:flatpackforces@gmail.com)  
+**Andrew T. Fielden**
+Affinari Holdings
+[flatpackforces@gmail.com](mailto:flatpackforces@gmail.com)
 [github.com/Andrew-T-Fielden](https://github.com/Andrew-T-Fielden)
+
